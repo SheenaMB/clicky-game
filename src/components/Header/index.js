@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Navbar from "./Navbar/index";
 
 export default function index(props) {
     return (

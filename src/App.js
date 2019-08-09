@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import FriendCard from "./components/FriendCard";
-// import Wrapper from "./components/Wrapper";
+import CardBody from "./components/CardBody";
+import Header from "./components/Header";
 import friends from "./friends.json";
 import "./App.css";
 // console.log(friends);
@@ -26,10 +26,20 @@ class App extends Component {
       <div>
               <Header
               score = {score} />
-              <CardBody characters = {data}/>
-              <Footer/>
+
+              <CardBody 
+              characters = {data}
+              />
+             
+              <footer class="footer">
+                <div class="bottom">Clicky Game! <img alt="react" src="assets/images/react.svg" />
+
+               </div>
+              </footer>
       </div>
-      // <Wrapper>
+       
+       
+       /* <Wrapper>
       //   <h1 className="title">Friends List</h1>
       //   {friends.map(friend => (`
       //   <FriendCard
@@ -42,12 +52,9 @@ class App extends Component {
       //     deleteFriend={this.deleteFriend}
       //   />
         // )
-      // }
+      // }   </Wrapper> */
     )}
-
-      // </Wrapper>
-    
-  }
+  
 }
 
 export default App;
