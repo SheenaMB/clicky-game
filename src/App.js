@@ -1,28 +1,19 @@
-// import React from "react";
 import React, { Component } from 'react';
-import FriendCard from "./components/FriendCard";
-import Wrapper from "./components/Wrapper";
+// import FriendCard from "./components/FriendCard";
+// import Wrapper from "./components/Wrapper";
 import friends from "./friends.json";
 import "./App.css";
-console.log(friends);
+// console.log(friends);
 
 //NEW CODE FOR HOMEWORK
-// import React from 'react'
-
-// export default function App() {
-//   return (
-//     <div>
-//        <Header/>
-//        <Container/>
-//        <Footer/>
-//     </div>
-//   )
-// }
 
 class App extends Component {
   
   state = {
-    score: 0
+    data: friends,
+    score: 0,
+    topScore: 0
+
   };
   
   // deleteFriend = id => {
@@ -30,12 +21,12 @@ class App extends Component {
   // };
 
   render () {
-    const {score} = this.state;
+    const {score, data} = this.state;
     return (
       <div>
               <Header
               score = {score} />
-              <Container/>
+              <CardBody characters = {data}/>
               <Footer/>
       </div>
       // <Wrapper>
@@ -54,8 +45,8 @@ class App extends Component {
       // }
     )}
 
-      </Wrapper>
-    );
+      // </Wrapper>
+    
   }
 }
 
