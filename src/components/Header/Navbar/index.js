@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
 
 export default function index(props) {
-    return (
-        <div>
-            <div className = "brand">Clicky Game</div>
-            <div>Score: {props.score2}</div>
-        </div>
-    )
+  return (
+    <div>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+          Clicky Game
+        </a>
+      <div>Score: {props.score2}</div>
+      </nav>
+    </div>
+  );
 }
