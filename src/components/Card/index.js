@@ -8,10 +8,14 @@ function Card(props) {
     return (
       <div className="card">
         <div className="img-container">
-          <img alt={props.name} src={props.image} />
+          <img 
+          className="unclicked" 
+          alt={props.name} 
+          src={props.image}  
+          onClick= {() => props.handleIncrement(props.id)}></img>
+       
         </div>
         
-        <span className="remove" onClick= {() => props.deleteFriend(props.id)} >𝘅</span>
       </div>
     );
   }

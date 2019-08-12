@@ -13,7 +13,7 @@ export default function index(props) {
         Game Status
       </div>
       
-      <div>Score: {props.score2}</div>
+      <div>Score: {props.score2} | Top Score: {props.topScore} </div>
       </nav>
     </div>
   );

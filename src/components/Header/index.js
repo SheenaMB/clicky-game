@@ -5,7 +5,9 @@ import "./style.css";
 export default function index(props) {
   return (
     <div>
-      <Navbar score2={props.score} />
+      <Navbar 
+        score2={props.score} 
+        topScore={props.topScore}/>
       
       <div class="jumbotron jumbotron-fluid">
         <div class="container">

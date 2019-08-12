@@ -18,13 +18,22 @@ class App extends Component {
   //   this.setState({ friends: this.state.friends.filter(friend => friend.id !== id) });
   // };
 
+  handleIncrement = () => {
+    // We always use the setState method to update a component's state
+    this.setState({ score: this.state.score + 1 });
+  };
+
   render() {
-    const { score, data } = this.state;
+    const { score, data, topScore } = this.state;
     return (
       <div>
-        <Header score={score} />
+        <Header 
+        score={score}
+        topScore={topScore} />
 
-        <CardBody characters={data} />
+        <CardBody 
+        characters={data} 
+        handleIncrement={this.handleIncrement}/>
 
         <footer class="footer">
           <div class="bottom">
