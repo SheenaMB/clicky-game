@@ -1,9 +1,10 @@
 import React from 'react'
 import Card from "../Card";
+import "./style.css";
 
 export default function index({characters}) {
     return (
-        <div>
+        <div className = "cardBody">
            {characters.map( char => (
             <Card 
             key = {char.id}
