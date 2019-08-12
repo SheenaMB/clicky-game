@@ -21,7 +21,11 @@ class App extends Component {
   handleIncrement = () => {
     // We always use the setState method to update a component's state
     this.setState({ score: this.state.score + 1 });
+    this.setState({ topScore: this.state.score + 2 });
+
   };
+
+  
 
   render() {
     const { score, data, topScore } = this.state;
