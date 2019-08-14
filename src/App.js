@@ -14,18 +14,22 @@ class App extends Component {
     topScore: 0
   };
 
-  // deleteFriend = id => {
-  //   this.setState({ friends: this.state.friends.filter(friend => friend.id !== id) });
-  // };
+  
 
   handleIncrement = () => {
     // We always use the setState method to update a component's state
     this.setState({ score: this.state.score + 1 });
-    this.setState({ topScore: this.state.score + 2 });
 
   };
 
-  
+  //onClick event
+  //if class= "clicked" then LOSE message and reset() game.
+    //reset() if score > TopScore then setState: Topscore = {score}
+  //else if class = "unclicked"
+  // score ++ 
+  // change class = "clicked"
+  //randomize/shuffle all the images
+
 
   render() {
     const { score, data, topScore } = this.state;
@@ -39,11 +43,11 @@ class App extends Component {
         characters={data} 
         handleIncrement={this.handleIncrement}/>
 
-        <footer class="footer">
+        {/* <footer class="footer">
           <div class="bottom">
             Clicky Game! <img alt="react" src="assets/images/react.svg" />
           </div>
-        </footer>
+        </footer> */}
 
       </div>
     );
